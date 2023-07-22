@@ -1,6 +1,6 @@
 Throw
 ```
-options hid-apple swap_fn_leftctrl=1` 
+options hid-apple swap_fn_leftctrl=1
 options hid_apple swap_opt_cmd=1
 ```
 - in `/etc/modprobe.d/hid_apple.conf`, regenerate your initramfs w/ `mkinitcpio -p Linux`, then reboot, for a traditional keyboard experience.
