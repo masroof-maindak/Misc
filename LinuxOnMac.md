@@ -28,6 +28,7 @@ Section "InputClass"
     Option "NaturalScrolling" "true"
     Option "ClickMethod" "clickfinger"
     Option "AccelProfile" "flat"
+    Option "DisableWhileTyping" "0"
     Option "TransformationMatrix" "1 0 0 0 1 0 0 0 0.3"
 EndSection
 ```
