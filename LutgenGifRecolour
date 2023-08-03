@@ -1,0 +1,12 @@
+#!/bin/env bash
+# Script for recoloring gifs with lutgen + convert (Image Magick)
+
+if [ $# -ne 3 ]; then
+        echo "usage: $0 <in.gif> <lutgen-palette> <out.gif>"
+        exit 1
+fi
+mkdir -p tmp
+convert "$1" -coalesce tmp/%05d.png
+lutgen apply tmp/*.png -p "$2"
+convert -delay 4 -loop 0 "$2/*.png" -layers Optimize "$3"
+rm -r tmp "$2"
