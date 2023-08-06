@@ -16,7 +16,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 ```
-to `~/.xsession` for the same in GTK/QT apps.
+to `~/.bash_profile` for the same in GTK/QT apps.
 
 - Add the following to `/etc/X11/xorg.conf.d/30-touchpad.conf`:
 ```
