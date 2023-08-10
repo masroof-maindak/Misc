@@ -3,7 +3,7 @@
 options hid-apple swap_fn_leftctrl=1
 options hid_apple swap_opt_cmd=1
 ```
-in `/etc/modprobe.d/hid_apple.conf`, regenerate your initramfs w/ `mkinitcpio -p Linux`, then reboot (if skill issue, then just redownload the Linux kernel - `sudo pacman -S linux`), for a traditional keyboard experience.
+in `/etc/modprobe.d/hid_apple.conf`, regenerate your initramfs w/ `mkinitcpio -p Linux`, then reboot (if skill issue, then just redownload the Linux kernel - `sudo pacman -S linux`) for a traditional keyboard experience.
 <br>   
 
 - Essential packages: `cpupower` (Set to the 'powersave' governor (underclocks processor to lowest frequency))  & `mbpfan`. <br>
@@ -35,3 +35,8 @@ EndSection
 For natural scrolling, tap-to-click and two-finger-right-click. <br>
 - For internet (at least on my Macbook Pro 2014), you need the `broadcom-wl` and `b43-firmware` packages. The latter is on the AUR. <br>
 - Also check out [scripts](Scripts/) and move the contents to your `.local/bin` (or any other directory in your path).
+- Standard deps + install.
+    1. ```sudo pacman -S reflector broadcom-wl wmctrl pulseaudio pulseaudio-alsa alsa-utils brightness ctl networkmanager xorg-xinit ranger htop neovim firefox dunst thunar feh gthumb nitrogen maim shotgun firefox rofi polybar wezterm lxappearance-gtk3 mpv imagemagick ffmpeg zathura zathura-pdf-mupdfz upower unzip```
+    2. ```paru -S b43-firmware mbpfan-git cpupower-gui visual-studio-code-bin dragon-drop autotiling lutgen-git ttf-icomoon-feather-git spotify_player```.<br>
+    3. Enable services for `NetworkManager` + `mbpfan`.
+    4. Copy rice files from dots repo.
