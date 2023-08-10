@@ -33,3 +33,4 @@ Section "InputClass"
 EndSection
 ```
 For natural scrolling, tap-to-click and two-finger-right-click. <br>
+- For internet (at least on my Macbook Pro 2014), you need the `broadcom-wl` and `b43-firmware` packages. The latter is on the AUR. <br>
