@@ -34,7 +34,7 @@ EndSection
 For natural scrolling, tap-to-click and two-finger-right-click.
 
 ## Install
-1. ```sudo pacman -S reflector broadcom-wl wmctrl playerctl pulseaudio pulseaudio-alsa alsa-utils brightnessctl networkmanager xorg-xinit ranger htop neovim firefox dunst thunar feh gthumb nitrogen maim shotgun firefox rofi polybar wezterm lxappearance-gtk3 mpv imagemagick ffmpeg zathura zathura-pdf-mupdfz upower unzip```
+1. ```sudo pacman -S reflector broadcom-wl wmctrl playerctl pulseaudio pulseaudio-alsa alsa-utils brightnessctl networkmanager xorg-xinit ranger htop neovim firefox dunst thunar feh gthumb nitrogen maim shotgun firefox rofi polybar wezterm lxappearance-gtk3 mpv imagemagick ffmpeg zathura zathura-pdf-mupdfz upower unzip jq```
 2. ```paru -S b43-firmware mbpfan-git cpupower-gui visual-studio-code-bin dragon-drop autotiling lutgen-git ttf-icomoon-feather-git spotify_player```.
 3. Enable services for `NetworkManager` + `mbpfan`.
 4. Copy rice files from dots repo.
