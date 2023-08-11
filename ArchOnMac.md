@@ -6,7 +6,7 @@ options hid_apple swap_opt_cmd=1
 in `/etc/modprobe.d/hid_apple.conf`, regenerate your initramfs w/ `mkinitcpio -p Linux`, then reboot (if skill issue, then just redownload the Linux kernel - `sudo pacman -S linux`) for a traditional keyboard experience.
 
 ## Scaling
-- `Xft.dpi: 192` in `~/.Xresources`, and
+`Xft.dpi: 192` in `~/.Xresources` (make sure to merge with xrdb in your `.xinitrc` obviously), and
 
 ```
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -17,7 +17,7 @@ in `~/.bash_profile`.
 
 ## Touchpad
 
-- Add the following to `/etc/X11/xorg.conf.d/30-touchpad.conf`:
+Add the following to `/etc/X11/xorg.conf.d/30-touchpad.conf`:
 ```
 Section "InputClass"
     Identifier "touchpad"
@@ -34,7 +34,7 @@ EndSection
 For natural scrolling, tap-to-click and two-finger-right-click.
 
 ## Install
-1. ```sudo pacman -S reflector broadcom-wl wmctrl pulseaudio pulseaudio-alsa alsa-utils brightness ctl networkmanager xorg-xinit ranger htop neovim firefox dunst thunar feh gthumb nitrogen maim shotgun firefox rofi polybar wezterm lxappearance-gtk3 mpv imagemagick ffmpeg zathura zathura-pdf-mupdfz upower unzip```
+1. ```sudo pacman -S reflector broadcom-wl wmctrl playerctl pulseaudio pulseaudio-alsa alsa-utils brightnessctl networkmanager xorg-xinit ranger htop neovim firefox dunst thunar feh gthumb nitrogen maim shotgun firefox rofi polybar wezterm lxappearance-gtk3 mpv imagemagick ffmpeg zathura zathura-pdf-mupdfz upower unzip```
 2. ```paru -S b43-firmware mbpfan-git cpupower-gui visual-studio-code-bin dragon-drop autotiling lutgen-git ttf-icomoon-feather-git spotify_player```.
 3. Enable services for `NetworkManager` + `mbpfan`.
 4. Copy rice files from dots repo.
