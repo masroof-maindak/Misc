@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#Get distro name
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    OS="${OS%Linux}"
+fi
+
+#Get kernel name
+KERNEL=$(uname -r)
+KERNEL="${KERNEL%-arch?-?}"
+
+#Colours
+PINK=$(tput setaf 5)
+BLUE=$(tput setaf 4)
+
+#Reset formatting
+R="\033[m"
+
+#Get WM name
+id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
+id=${id##* }
+wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
+wm=${wm/*WM_NAME = }
+wm=${wm/\"}
+wm=${wm/\"*}
+
+#Print
+echo -e "${PINK} (\ /)    ${BLUE}os  ${R}${OS}"
+echo -e "${PINK} ( . .)    ${BLUE}kr  ${R}${KERNEL}"
+echo -e "${PINK} c(${R}\"${PINK})(${R}\"${PINK})    ${BLUE}wm  ${R}${wm}"
+echo -e ""

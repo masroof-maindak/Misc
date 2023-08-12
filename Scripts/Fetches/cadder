@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    OS="${OS%Linux}"
+fi
+KERNEL=$(uname -r)
+KERNEL="${KERNEL%-arch?-?}"
+
+#Colours - Pass integer for colour. Default is green.
+accent=$(tput setaf ${1:-2})
+
+#Reset formatting
+R="\033[m"
+
+echo -e " ${accent} ／l、     "
+echo -e " ${accent}(ﾟ､ ｡７      ${R}${OS}"  
+echo -e " ${accent}l  ~ ヽ      ${R}${KERNEL}"
+echo -e " ${accent}じしf_,)ノ"
+echo -e "${R}"
