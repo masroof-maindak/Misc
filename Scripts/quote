@@ -1,0 +1,9 @@
+#!/bin/bash
+
+uri=$(curl -s "https://api.quotable.io/random?maxLength=110")
+
+echo ""
+echo $uri | jq .content
+echo ""
+echo ""
+
