@@ -1,0 +1,63 @@
+#!/bin/sh
+
+LC_ALL=C
+LANG=C
+
+# System Info
+os() {
+	if [ -f /etc/os-release ]; then
+    		. /etc/os-release
+    		OS=$NAME
+    		OS="${OS%Linux}"
+		echo $OS
+	fi
+}
+wm() {
+	xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \"
+}
+shell() {
+	basename ${SHELL}
+}
+pkg() {
+	pacman -Q | wc -l
+}
+kernel() {
+	uname -r | sed 's/-arch.*//'
+}
+
+# Colors and formatting
+n=$'\033[0m' # Normal text
+
+b=""
+l=""
+[ "${CF_BOLD:-true}" = 'true' ] && b=$'\033[1m' # Bold text
+[ "${CF_ITALIC:-false}" = 'true' ] && l=$'\033[3m' # Italic text
+
+c=3 cb=4
+for j in c cb; do
+	for i in {0..7}; do
+		printf -v $j$i %b "\033[${!j}${i}m"
+	done
+done
+
+cmd='cat'
+
+owl() {
+	$cmd <<-EOF
+        
+
+	      $c2${b}$s un$n  $(whoami)$n  
+	      $c2${b}$s hn$n  $(hostnamectl hostname)$n  
+		      ----------------
+	      $c2${b}$s kr$n  $(kernel)$n  
+	      $c2${b}$s os$n  $(os)$n  
+	      $c2${b}$s wm$n  $(wm)$n
+	      $c2${b}$s sh$n  $(shell)$n
+	      $c2${b}$s pk$n  $(pkg)$n  
+
+
+	EOF
+}
+
+# Parse arguments and run functions
+${CF_DEFAULT_ANIMAL:-owl} && sleep infinity
