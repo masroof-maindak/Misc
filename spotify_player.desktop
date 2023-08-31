@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=Spotify
-Exec=wezterm start --class Spotify -e spotify_player
+Exec=st -c Spotify -e spotify_player
