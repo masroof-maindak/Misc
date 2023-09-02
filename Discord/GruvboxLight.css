@@ -1,0 +1,69 @@
+:root { 
+	--background-primary: #fbf1c7;
+	--background-secondary: #fbf1c7;
+	--background-secondary-alt: #fbf1c7;
+	--background-tertiary: #ebdbb2;    
+	--background-accent: #458588;
+	--background-mentioned: #ebdbb2;
+	--background-floating: #3c3836;
+
+	--interactive-muted: #d5c4a1;
+	--background-mentioned-hover: #ebdbb2;
+	
+	--info-warning-foreground: #3c3836;
+	--text-normal: #3c3836;
+	--text-muted: #bdae93;
+	--interactive-normal: #458588;
+	/* --interactive-active: #83a598; */
+	--channels-default: #928374;
+
+	--header-primary: #3c3836;
+	--header-secondary: #504945;
+
+	--channeltextarea-background: #ebdbb2;
+    --scrollbar-thin-thumb: #ebdbb2; 
+    --scrollbar-auto-thumb: #ebdbb2; 
+    --scrollbar-thin-track: transparent; 
+    --scrollbar-auto-track: transparent; 
+	--channel-icon: #504945;
+
+	--white-500: #fcf1c7;
+
+
+	--search-popout-option-non-text-color: #3c3836;
+    --search-popout-option-filter-color: #3c3836;
+    --search-popout-option-answer-color: #3c3836;
+}
+
+* {
+	font-family: 'VictorMono Nerd Font';
+}
+
+.wrapper-1ZcZW- {
+	background-color: #83a598;
+	color: #3c3836; 
+}
+
+.markup-eYLPri code.inline {
+	background-color: #ebdbb2;
+}
+
+
+.container-ZMc96u,
+.icon-2xnN2Y,
+.themed-qqoYp3.item-2GWPIy,
+.defaultColor-1GKx81{
+	color: #3c3836 !important;
+}
+
+.container-1um7CU {
+	background-color: #ebdbb2 !important;
+}
+
+.header-3xB4vB {
+	background-color: #fbf1c7 !important;
+}
+
+.themed-Hp1KC_ {
+	background-color: #fbf1c7 !important;
+}
