@@ -1,1 +1,1 @@
-Add `"SKIP_HOST_UPDATE":false,` in `~/.config/discord/settings.json`
+Add `"SKIP_HOST_UPDATE":true,` in `~/.config/discord/settings.json`
