@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify
+Exec=alacritty --class Spotify -e spotify_player
